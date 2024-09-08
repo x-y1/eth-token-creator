@@ -10,7 +10,7 @@ export default function Home() {
         <Grid className='border border-red-800 h-[10%]'>
           <Navbar />
         </Grid>
-        <Grid className='border border-red-800 flex-grow'>
+        <Grid className='border border-red-800 sm:flex-grow h-[75%]'>
           <Deployer />
         </Grid>
       </Grid>

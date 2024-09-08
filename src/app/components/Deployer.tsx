@@ -1,15 +1,16 @@
 import Grid from "@mui/material/Grid2";
+import ContractBox from "./ContractBox";
 
 export default function Deployer() {
   return (
-    <Grid container spacing={4} columns={12} flexGrow={1} className='border border-blue-800 h-5/6 m-8'>
-      <Grid size={{xs: 3 }} className='border border-white'>
+    <Grid container direction={{xs: 'column', md: 'row'}} spacing={4} columns={{md: 12}} className='border border-blue-800 h-5/6 m-8'>
+      <Grid size={{md: 3 }} className='border border-white h-full'>
 
       </Grid>
-      <Grid size={{xs: 'grow' }} className='border border-white'>
-
+      <Grid size={{xs: 'grow' }} className='border border-white h-full'>
+        <ContractBox/>
       </Grid>
-      <Grid size={{xs: 3}} className='border border-white'>
+      <Grid size={{md: 3}} className='border border-white h-full'>
 
       </Grid>
     </Grid>
