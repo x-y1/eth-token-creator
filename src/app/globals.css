@@ -25,3 +25,34 @@ body {
     text-wrap: balance;
   }
 }
+
+.grid-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: 100px 100px;
+  background-image: linear-gradient(
+      to right,
+      rgba(231, 255, 231, 0.151) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(109, 116, 109, 0.2) 1px, transparent 1px);
+  z-index: 1;
+}
+
+.small-grid {
+  background-size: 10px 10px;
+  z-index: 2;
+  opacity: 0.5;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  pointer-events: none;
+}

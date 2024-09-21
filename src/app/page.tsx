@@ -8,6 +8,7 @@ import Grid from "@mui/material/Grid2";
 import { store } from './store';
 import CubeSpinner from "./components/CubeSpinner";
 import { useEffect, useState } from 'react';
+import MovingLines from './components/MovingLines';
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -23,16 +24,23 @@ export default function Home() {
   }
   return (
     <Provider store={store}>
-      <Container maxWidth={false} disableGutters className='border border-white h-screen'>
-        <Grid container direction='column' className='border border-white h-full'>
-          <Grid className='border border-red-800 h-[10%]'>
-            <Navbar />
+      <div className="relative">
+        <div className="grid-layer"></div>
+        <div className="grid-layer small-grid"></div>
+        <MovingLines />
+
+        <Container maxWidth={false} disableGutters className="border border-white h-screen relative z-10">
+          <Grid container direction='column' className='border border-white h-full'>
+            <Grid className='border border-red-800 h-[10%]'>
+              <Navbar />
+            </Grid>
+            <Grid className='border border-red-800 sm:flex-grow h-[75%]'>
+              <Deployer />
+            </Grid>
           </Grid>
-          <Grid className='border border-red-800 sm:flex-grow h-[75%]'>
-            <Deployer />
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </div>
     </Provider>
   );
+
 }
