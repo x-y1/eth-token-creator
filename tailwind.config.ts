@@ -12,6 +12,15 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        'rotate-cube': {
+          '0%': { transform: 'rotateX(0deg) rotateY(0deg)' },
+          '100%': { transform: 'rotateX(360deg) rotateY(360deg)' },
+        },
+      },
+      animation: {
+        'rotate-cube': 'rotate-cube 5s linear infinite',
+      },
     },
   },
   plugins: [],

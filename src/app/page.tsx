@@ -6,7 +6,21 @@ import Deployer from "./components/Deployer";
 import { Container } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import { store } from './store';
+import CubeSpinner from "./components/CubeSpinner";
+import { useEffect, useState } from 'react';
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 3500);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (loading) {
+    return <CubeSpinner />;
+  }
   return (
     <Provider store={store}>
       <Container maxWidth={false} disableGutters className='border border-white h-screen'>
