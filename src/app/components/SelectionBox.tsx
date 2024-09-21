@@ -6,11 +6,11 @@ import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 export default function SelectionBox() {
     const features = useSelector((state: RootState) => state.features.features);
     return (
-        <Grid container direction='column' spacing={4} className='border border-red-800 h-full'>
-            <Grid container justifyContent='center' alignItems='center' className='border border-red-800 h-[10%]'>
+        <Grid container direction='column' spacing={4} className='h-full'>
+            <Grid container justifyContent='center' alignItems='center' className='h-[10%]'>
                 Select Features
             </Grid>
-            <Grid size={{ xs: 'grow' }} className='border border-red-800 p-8'>
+            <Grid size={{ xs: 'grow' }} className='p-8'>
                 <FormGroup>
                     {Object.keys(features).map((feature) => (
                         <FormControlLabel

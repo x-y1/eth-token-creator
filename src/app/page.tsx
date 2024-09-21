@@ -29,12 +29,12 @@ export default function Home() {
         <div className="grid-layer small-grid"></div>
         <MovingLines />
 
-        <Container maxWidth={false} disableGutters className="border border-white h-screen relative z-10">
-          <Grid container direction='column' className='border border-white h-full'>
-            <Grid className='border border-red-800 h-[10%]'>
+        <Container maxWidth={false} disableGutters className="h-screen relative z-10">
+          <Grid container direction='column' className='h-full'>
+            <Grid className='h-[10%]'>
               <Navbar />
             </Grid>
-            <Grid className='border border-red-800 sm:flex-grow h-[75%]'>
+            <Grid className='sm:flex-grow h-[75%]'>
               <Deployer />
             </Grid>
           </Grid>
