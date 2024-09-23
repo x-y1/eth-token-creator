@@ -1,0 +1,33 @@
+.custom-scroll-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;  /* Enable vertical scrolling */
+    scrollbar-width: thin; /* Firefox: make scrollbar thinner */
+    scrollbar-color: #888 #444; /* Firefox: scrollbar colors */
+  }
+  
+  /* For WebKit browsers like Chrome and Safari */
+  .custom-scroll-container::-webkit-scrollbar {
+    width: 8px; /* Set scrollbar width */
+  }
+  
+  .custom-scroll-container::-webkit-scrollbar-track {
+    background: #444; /* Track color */
+  }
+  
+  .custom-scroll-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Thumb color */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid #444; /* Padding around thumb */
+  }
+  
+  /* Adjust the scroll speed (optional, for finer control) */
+  .custom-scroll-container {
+    scroll-behavior: smooth; /* Smooth scrolling */
+  }
+  
+  .custom-syntax-highlighter {
+    padding: 16px; /* Adjust padding to make scroll more natural */
+    white-space: pre-wrap; /* Ensure long lines wrap */
+  }
+  
