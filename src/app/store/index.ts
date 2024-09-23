@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import featuresReducer from './featuresSlice';
+import contractReducer from './contractSlice';
 
 export const store = configureStore({
     reducer: {
-        features: featuresReducer
+        features: featuresReducer,
+        contract: contractReducer
     }
 });
 
